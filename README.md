@@ -87,10 +87,7 @@ function requestReducer(state: State, action: Action): State {
 }
 
 export function RequestComponent() {
-  const [requestState, requestDispatch] = useReducer(
-    requestReducer,
-    initialState
-  );
+  const [requestState, requestDispatch] = useReducer(requestReducer, initialState);
 
   const startRequest = () => {
     requestDispatch({ type: "START_REQUEST" });
